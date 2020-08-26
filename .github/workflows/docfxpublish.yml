@@ -17,7 +17,7 @@ jobs:
         args: docs/docfx_project/docfx.json
     
     # Publish generated site using GitHub Pages
-    - name: Publish Documentation on GitHub Pages
+    - name: publish
       uses: maxheld83/ghpages@master    
       env:
         BUILD_DIR: _site # docfx's default output directory is _site

@@ -15,3 +15,10 @@ jobs:
       uses: nikeee/docfx-action@v1.0.0
       with:
         args: docs/docfx_project/docfx.json
+    
+    # Publish generated site using GitHub Pages
+    - name: Publish Documentation on GitHub Pages
+      uses: maxheld83/ghpages@master    
+      env:
+        BUILD_DIR: _site # docfx's default output directory is _site
+        GH_PAT: ${{ f49ae8f42091046dc906bc9def7a7000e6c5b436  }} # See https://github.com/maxheld83/ghpages

@@ -21,4 +21,4 @@ jobs:
       uses: maxheld83/ghpages@master    
       env:
         BUILD_DIR: _site # docfx's default output directory is _site
-        GH_PAT: ${{ f49ae8f42091046dc906bc9def7a7000e6c5b436  }} # See https://github.com/maxheld83/ghpages
+        GH_PAT: ${{ secrets.JONASRO_TOKEN  }} # See https://github.com/maxheld83/ghpages

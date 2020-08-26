@@ -1,0 +1,17 @@
+name: DocFXUpdate
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  updatedocsjob:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    # Build and deploy docs
+    - name: docfx-action
+      uses: nikeee/docfx-action@v1.0.0
+      with:
+        args: docs/docfx_project/docfx.json
